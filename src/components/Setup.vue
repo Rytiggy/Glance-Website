@@ -594,7 +594,6 @@ export default {
         //
         this.selectedDataSouce = this.dataSoures.find(ds => {
           if (ds.title.toLowerCase() == datasource.toLowerCase()) {
-            console.log(ds.title);
             this.stepThreeDisable = false;
             this.step = 4;
             return ds;
