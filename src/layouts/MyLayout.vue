@@ -77,7 +77,7 @@
       <navbar />
     </q-header>
     <q-page-container>
-      <router-view />
+      <router-view class="text-subtitle1" />
     </q-page-container>
     <glanceFooter />
   </q-layout>

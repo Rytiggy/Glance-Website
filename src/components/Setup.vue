@@ -392,8 +392,11 @@ export default {
           ],
           requirements: [
             {
-              title:
-                "A Nightscout site: <a class='text-primary' href='http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku' target='_blank'>How to setup a Nightscout site</a>"
+              title: `
+                <b>
+                  IMPORTANT:
+                </b> 
+                You must have or setup a Nightscout site. <a class='text-primary' href='http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku' target='_blank'>How to setup a Nightscout site</a>`
             },
             {
               title: "Iphone or Android phone"
@@ -409,8 +412,9 @@ export default {
               img: "https://media.giphy.com/media/4ZxdAQeUpXuFu8QsyV/giphy.gif"
             },
             {
-              title:
-                "In Glance's settings select Nightscout as your data source then enter your Nightscout site name and select your Nightscout host site",
+              title: `In Glance's settings select Nightscout as your data source then enter your Nightscout site name and select your Nightscout host site 
+                <br/></br>
+                <b>Note:</b> <i>Glancedata</i> is just an example and you must enter your nightscout site name! `,
               img: "https://media.giphy.com/media/iNRFe1oGTOdkypd4o9/giphy.gif"
             },
             {
@@ -584,6 +588,21 @@ export default {
         return newVal;
       }
       return oldVal;
+    },
+    "$route.query.datasource": {
+      handler: function(datasource) {
+        //
+        this.selectedDataSouce = this.dataSoures.find(ds => {
+          if (ds.title.toLowerCase() == datasource.toLowerCase()) {
+            console.log(ds.title);
+            this.stepThreeDisable = false;
+            this.step = 4;
+            return ds;
+          }
+        });
+      },
+      deep: true,
+      immediate: true
     }
   },
   methods: {
