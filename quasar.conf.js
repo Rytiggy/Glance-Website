@@ -5,7 +5,7 @@ module.exports = function(ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
-    boot: ["i18n", "axios"],
+    boot: ["i18n", "axios", "firebase"],
 
     css: ["app.styl"],
 
@@ -66,13 +66,16 @@ module.exports = function(ctx) {
         "QBadge",
         "QSpace",
         "QBtnDropdown",
-        "QDialog"
+        "QDialog",
+        "QForm",
+        "QInput",
+        "QScrollObserver"
       ],
 
       directives: ["Ripple", "ClosePopup"],
 
       // Quasar plugins
-      plugins: ["Notify"]
+      plugins: ["Notify", "LocalStorage"]
     },
 
     supportIE: true,
