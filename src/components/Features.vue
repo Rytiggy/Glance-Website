@@ -94,8 +94,8 @@
               <div class="text-subtitle1 text-weight-normal">
                 Glance is compatible with Fitbit smartwatchs that includes the
                 Fitbit
-                <b>Versa 2</b>, <b>Versa</b>, <b>Versa lite</b>, and
-                <b>Ionic</b>.
+                <b>Sense</b>, <b>Versa 3</b>, <b>Versa 2</b>, <b>Versa</b>,
+                <b>Versa lite</b>, and <b>Ionic</b>.
               </div>
             </q-card-section>
           </q-card>
